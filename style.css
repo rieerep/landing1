@@ -15,14 +15,13 @@ body {
 }
 .header {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     background: #dadada;
     color: #000000;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     padding: 10px 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-family: "Sofia", serif;
+    font-family: 'Capriola', serif;
 }
 
 .nav-item {
@@ -31,18 +30,24 @@ body {
 
 ul {
     display: flex;
-    margin-right: 20px;
+    margin-right: 10%;
     list-style-type: none;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
-    margin-left: 300px;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: center;
 }
 
-.container {
+.navigation li.active {
+    background-color: rgb(255, 200, 0);
+}
+
+.about-container {
     width: 80vw;
     /* margin: auto; */
-    display: flex;
     height: 100vh;
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -51,6 +56,7 @@ ul {
     background: #FFC14B;
     bottom: 0px;
     width: 100%;
+    text-align: center;
 }
 
 aside {
@@ -83,18 +89,40 @@ a:active {
     background-color: #FFC14B;
 }
 
-.content {
+.about-content {
     display: flex;
-    flex-direction: column;
-    max-width: 500px;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1200px;
     padding: 2em;
-
+    align-items: center;
 }
 
-@media only screen and (max-width: 600px){
+.about-text {
+    /* text-align: center; */
+    padding: 4em;
+}
+.content-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    width: 100%;
+    max-width: 350px;    
+}
+
+/* STYLE CURRICULUM */
+.cv-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* STYLE PORTFOLIO */
+
+@media only screen and (max-width: 450px){
     body {
         background-color: lightskyblue;
-
     }
     .header {
         flex-direction: column;
@@ -103,10 +131,12 @@ a:active {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 0px;
     }
-    .container {
+    .about-container {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        /* flex-wrap: wrap; */
     }
 
     ul {
@@ -114,5 +144,10 @@ a:active {
     }
     aside {
         font-size: 1em;
+    }
+
+    .content-img {
+        width: 150px;
+        height: 150px;
     }
 }
